@@ -912,14 +912,18 @@ RCT_EXPORT_METHOD(getAudioRoutes: (RCTPromiseResolveBlock)resolve
 
 - (void)configureAudioSession
 {
+    NSDictionary *settings = [RNCallKeep getSettings];
+    if (settings[@"audioSession"][@"manageAudioSession"] != nil
+        && ![settings[@"audioSession"][@"manageAudioSession"] boolValue]) {
+        return;
+    }
+
 #ifdef DEBUG
     NSLog(@"[RNCallKeep][configureAudioSession] Activating audio session");
 #endif
 
     NSUInteger categoryOptions = AVAudioSessionCategoryOptionAllowBluetooth | AVAudioSessionCategoryOptionAllowBluetoothA2DP;
     NSString *mode = AVAudioSessionModeDefault;
-
-    NSDictionary *settings = [RNCallKeep getSettings];
     if (settings && settings[@"audioSession"]) {
         if (settings[@"audioSession"][@"categoryOptions"]) {
             categoryOptions = [settings[@"audioSession"][@"categoryOptions"] integerValue];
