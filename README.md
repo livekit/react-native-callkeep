@@ -135,6 +135,8 @@ Alternative on iOS you can perform setup in `AppDelegate.m`. Doing this allows c
         If provided, it will override the default AVAudioSession setCategory options.
       - `mode`: AudioSessionMode|string (optional)
         If provided, it will override the default AVAudioSession setMode mode.
+      - `autoConfigure`: boolean (optional)
+        If set to `false`, RNCallKeep will skip AVAudioSession category, mode, sample rate, buffer duration, and activation. Defaults to `true`.
   - `android`: object
     - `alertTitle`: string (required)
       When asking for _phone account_ permission, we need to provider a title for the `Alert` to ask the user for it

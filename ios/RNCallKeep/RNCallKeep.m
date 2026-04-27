@@ -913,8 +913,9 @@ RCT_EXPORT_METHOD(getAudioRoutes: (RCTPromiseResolveBlock)resolve
 - (void)configureAudioSession
 {
     NSDictionary *settings = [RNCallKeep getSettings];
-    if (settings[@"audioSession"][@"manageAudioSession"] != nil
-        && ![settings[@"audioSession"][@"manageAudioSession"] boolValue]) {
+    NSDictionary *audioSessionSettings = settings[@"audioSession"];
+    if (audioSessionSettings[@"autoConfigure"] != nil
+        && ![audioSessionSettings[@"autoConfigure"] boolValue]) {
         return;
     }
 
