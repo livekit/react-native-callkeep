@@ -101,6 +101,7 @@ declare module 'react-native-callkeep' {
       audioSession?: {
         categoryOptions?: AudioSessionCategoryOption | number,
         mode?: AudioSessionMode | string,
+        autoConfigure?: boolean,
       }
     },
     android: {

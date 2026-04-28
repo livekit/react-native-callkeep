@@ -17,6 +17,18 @@ const AudioSessionCategoryOption = {
   overrideMutedMicrophoneInterruption: 0x80,
 }
 
+/**
+ * iOS audioSession configuration options.
+ *
+ * @typedef {Object} AudioSessionConfig
+ * @property {number} [categoryOptions] - Bitmask of AudioSessionCategoryOption values.
+ * @property {string} [mode] - One of the AudioSessionMode values.
+ * @property {boolean} [autoConfigure] - When set to false, RNCallKeep will skip all
+ *   AVAudioSession configuration (category, mode, sample rate, buffer duration, activation).
+ *   Use this when another SDK (e.g. LiveKit's AudioDeviceModule) owns the audio session.
+ *   Defaults to true (RNCallKeep configures the audio session).
+ */
+
 const AudioSessionMode = {
   default: 'AVAudioSessionModeDefault',
   gameChat: 'AVAudioSessionModeGameChat',
