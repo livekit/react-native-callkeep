@@ -2,16 +2,14 @@
 
 ## Automatic linking
 
-```sh
-react-native link react-native-callkeep
-```
+React Native 0.60+ links this package automatically via CocoaPods. After installing the npm package, run `pod install` from the `ios` directory.
 
 ## Installation with Cocoa pods
 
-Include in a Podfile in your react-native `ios` directory:
+Only needed for projects that have disabled autolinking. Include in a Podfile in your react-native `ios` directory:
 
 ```
-pod 'RNCallKeep', :path => '../node_modules/react-native-callkeep'
+pod 'RNCallKeep', :path => '../node_modules/@livekit/react-native-callkeep'
 ```
 
 Then:
@@ -28,7 +26,7 @@ pod install
 
 ![iOS Add Library](pictures/ios-add-library.png)
 
-1.2. Choose `node_modules/react-native-callkeep/ios/RNCallKeep.xcodeproj` then click `Add`.
+1.2. Choose `node_modules/@livekit/react-native-callkeep/ios/RNCallKeep.xcodeproj` then click `Add`.
 
 ![iOS Select Library](pictures/ios-select-library.png)
 
@@ -60,7 +58,7 @@ You'll now have the Library included.
 
 2.1. Click on `Build Settings` tab, then search for `Header Search Paths`.
 
-2.2. Add `$(SRCROOT)/../node_modules/react-native-callkeep/ios/RNCallKeep`.
+2.2. Add `$(SRCROOT)/../node_modules/@livekit/react-native-callkeep/ios/RNCallKeep`.
 
 ![iOS Search Paths](pictures/ios-search-paths.png)
 
