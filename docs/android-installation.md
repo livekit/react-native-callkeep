@@ -2,11 +2,11 @@
 
 ## Automatic linking
 
-```sh
-react-native link react-native-callkeep
-```
+React Native 0.60+ links this package automatically. No manual step is required.
 
 ## Manual installation
+
+Only needed for projects that have disabled autolinking.
 
 1. In `android/app/build.gradle`
 Add a line `compile project(':react-native-callkeep')` in `dependencies {}` section.
@@ -16,7 +16,7 @@ Add:
 
 ```java
 include ':react-native-callkeep'
-project(':react-native-callkeep').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-callkeep/android')
+project(':react-native-callkeep').projectDir = new File(rootProject.projectDir, '../node_modules/@livekit/react-native-callkeep/android')
 ```
 
 3. In `android/app/src/main/java/.../MainApplication.java`:

@@ -1,7 +1,7 @@
 # React Native CallKeep
 
-[![npm version](https://badge.fury.io/js/react-native-callkeep.svg)](https://badge.fury.io/js/react-native-callkeep)
-[![npm downloads](https://img.shields.io/npm/dm/react-native-callkeep.svg?maxAge=2592000)](https://img.shields.io/npm/dm/react-native-callkeep.svg?maxAge=2592000)
+[![npm version](https://badge.fury.io/js/@livekit%2Freact-native-callkeep.svg)](https://badge.fury.io/js/@livekit%2Freact-native-callkeep)
+[![npm downloads](https://img.shields.io/npm/dm/@livekit/react-native-callkeep.svg?maxAge=2592000)](https://img.shields.io/npm/dm/@livekit/react-native-callkeep.svg?maxAge=2592000)
 
 **React Native CallKeep** utilises a brand new iOS 10 framework **CallKit** and Android **ConnectionService** to make the life easier for VoIP developers using React Native.
 
@@ -29,7 +29,7 @@ For more information about **ConnectionService** on Android, please see [Android
 
 
 # Demo
-A demo of `react-native-callkeep` is available in the [wazo-react-native-demo](https://github.com/wazo-pbx/wazo-react-native-demo) repository.
+A demo of `@livekit/react-native-callkeep` is available in the [wazo-react-native-demo](https://github.com/wazo-pbx/wazo-react-native-demo) repository.
 
 #### Android
 ![Connection Service](docs/pictures/connection-service.jpg)
@@ -39,9 +39,9 @@ A demo of `react-native-callkeep` is available in the [wazo-react-native-demo](h
 
 # Installation
 ```sh
-npm install --save react-native-callkeep
+npm install --save @livekit/react-native-callkeep
 # or
-yarn add react-native-callkeep
+yarn add @livekit/react-native-callkeep
 ```
 
 - [iOS](docs/ios-installation.md)
@@ -52,7 +52,7 @@ yarn add react-native-callkeep
 #### Setup
 
 ```js
-import RNCallKeep from 'react-native-callkeep';
+import RNCallKeep from '@livekit/react-native-callkeep';
 
 const options = {
   ios: {
@@ -183,7 +183,7 @@ const CONSTANTS = {
   }
 };
 
-const { CONSTANTS as CK_CONSTANTS, RNCallKeep } from 'react-native-callkeep';
+const { CONSTANTS as CK_CONSTANTS, RNCallKeep } from '@livekit/react-native-callkeep';
 
 console.log(CK_CONSTANTS.END_CALL_REASONS.FAILED) // outputs 1
 ```
@@ -508,7 +508,7 @@ RNCallKeep.reportEndCallWithUUID(uuid, reason);
     - Missed: 6 (on iOS this will map to remote user ended call)
   - Access reasons as constants
   ```js
-  const { CONSTANTS as CK_CONSTANTS, RNCallKeep } from 'react-native-callkeep';
+  const { CONSTANTS as CK_CONSTANTS, RNCallKeep } from '@livekit/react-native-callkeep';
 
   RNCallKeep.reportEndCallWithUUID(uuid, CK_CONSTANTS.END_CALL_REASONS.FAILED);
   ```
@@ -1026,7 +1026,7 @@ A full example is available in the [example](https://github.com/react-native-web
 
 ```javascript
 import React from 'react';
-import RNCallKeep from 'react-native-callkeep';
+import RNCallKeep from '@livekit/react-native-callkeep';
 import uuid from 'uuid';
 
 class RNCallKeepExample extends React.Component {

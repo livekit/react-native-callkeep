@@ -1,4 +1,4 @@
-declare module 'react-native-callkeep' {
+declare module '@livekit/react-native-callkeep' {
   export type NativeEvents = {
     didReceiveStartCallAction: 'RNCallKeepDidReceiveStartCallAction';
     answerCall: 'RNCallKeepPerformAnswerCallAction';
